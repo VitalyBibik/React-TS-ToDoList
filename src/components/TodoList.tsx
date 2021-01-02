@@ -38,8 +38,11 @@ export const TodoList: React.FC<TodolistProps> = ({
                         onChange={onToggle.bind(null, todo.id)}/>
                         <span>{todo.title}</span>
                         <i
-                            className="material-icons red-text"
-                           onClick={event => removeHandler(event, todo.id)}/>
+                            className="small material-icons"
+                            onClick={event => removeHandler(event, todo.id)}
+                        >
+                            cancel
+                        </i>
                     </label>
                 </li>)
             })}
