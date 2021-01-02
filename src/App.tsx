@@ -6,15 +6,16 @@ import {AboutPage} from "./pages/AboutPage";
 
 
 const App:React.FC = () => {
- return <BrowserRouter>
-    <NavBar />
-    <div className='container'>
-      <Switch>
-        <Route  component={TodosPage} path="/" exact />
-        <Route component={AboutPage} path="/about" />
-      </Switch>
+ return (
+     <BrowserRouter>
+         <NavBar />
+         <div className='container'>
+          <Switch>
+            <Route  component={TodosPage} path="/" exact />
+            <Route component={AboutPage} path="/about" />
+          </Switch>
     </div>
-  </BrowserRouter>
+  </BrowserRouter>)
 }
 
 export default App;
