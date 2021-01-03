@@ -3,15 +3,15 @@ import { ITodo } from '../interfaces'
 
 type TodoListProps = {
     todos: ITodo[]
-    onToggle(id: number): void
+    onToggle:(id: number) => void
     onRemove: (id: number) => void
 }
 
 export const TodoList: React.FC<TodoListProps> = ({
-                                                      todos,
-                                                      onRemove,
-                                                      onToggle
-                                                  }) => {
+   todos,
+   onRemove,
+   onToggle
+}) => {
     if (todos.length === 0) {
         return <p className="center">Пока дел нет!</p>
     }

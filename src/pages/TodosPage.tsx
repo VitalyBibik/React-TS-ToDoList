@@ -31,12 +31,13 @@ export const TodosPage: React.FC = () => {
         setTodos(prev =>
             prev.map(todo => {
                 if (todo.id === id) {
-                    console.log('clicked')
-                    todo.completed = !todo.completed
+                    return {
+                        ...todo,
+                        completed: !todo.completed
+                    }
                 }
                 return todo
-            })
-        )
+            }))
     }
 
     const removeHandler = (id: number) => {
